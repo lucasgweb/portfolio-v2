@@ -18,6 +18,15 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: var(--background-3);
+}
+
+.btn-primary:hover {
+    color: #141414;
+    background-color: #22b341;
+}
+
 h1 {
     margin: 0;
     padding: 0;
@@ -104,10 +113,12 @@ p {
 #text-animated::after {
     content: '|';
     opacity: 1;
+    color: var(--background-3);
     margin-left: 5px;
     display: inline-block;
     animation: blink .7s infinite;
 }
+
 
 @keyframes blink {
     0%, 100% {
@@ -118,9 +129,10 @@ p {
     }
 }
 
-.perfil-social {
+.prefil-social {
     text-align: center;
     display: flex;
+    gap: 20px;
     justify-content: center;
 }
 
@@ -159,6 +171,7 @@ p {
     gap: 16px;
     justify-content: space-around;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .portifolio-botao a {
@@ -173,6 +186,7 @@ p {
 
 .projetos {
     display: flex;
+    justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
 }
@@ -220,6 +234,26 @@ p {
     font-size: 0.7rem;
 }
 
+.skills {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.stacks-items {
+    font-size: 90px;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 84px;
+}
+
+.stacks-items i {
+    flex: 1;
+}
+
 
 @media (max-width: 800px) {
     .container {
@@ -260,5 +294,14 @@ p {
 
     .portifolio-botao a {
         font-size: 0.9rem;
+    }
+
+    .stacks-items {
+        font-size: 50px;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px 30px;
     }
 }

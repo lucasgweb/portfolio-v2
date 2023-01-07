@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 </head>
 
 <body>
@@ -21,8 +22,8 @@
             <h1>Lucas Henrique</h1>
             <p id="text-animated">Desenvolvedor Full Stack</p>
             <div class="prefil-social">
-                <img src="img/Brands/github.png" alt="">
-                <img src="img/Brands/linkedin.png" alt="">
+                <a href="https://github.com/lucasgweb/"><img src="img/Brands/github.png" alt=""></a>
+                <a href="#"><img src="img/Brands/linkedin.png" alt=""></a>
             </div>
         </div>
     </header>
@@ -40,12 +41,12 @@
                     cada vez melhor.</p>
             </div>
             <div class="btn">
-                <a class="bg-3 font-color-3" href="#">Baixar meu CV <img src="img/Vector.svg" alt=""></a>
+                <a class="bg-3 font-color-3 btn-primary" href="#">Baixar meu CV <img src="img/Vector.svg" alt=""></a>
                 <a class="bg-2 font-color-2" href="#">Entre em contato</a>
             </div>
             <div class="portifolio-botao bg-2">
-                <a class=" bg-1 font-color-2" href="#">Portifólio</a>
-                <a class="font-color-2" href="#">Skills</a>
+                <a id="projetos" class=" bg-1 font-color-2">Portifólio</a>
+                <a id="skills" class="font-color-2">Skills</a>
             </div>
             <div class="projetos">
                 <div class="projetos-item">
@@ -63,8 +64,27 @@
                 <div class="projetos-item">
                     <h2 class="font-color-2">Clone Landing page B7web </h2>
                     <div class="projeto-foto">
-                        <a href="https://lucasgweb.github.io/landpage-b7web-clone/"><img src="img/projeto3.png" alt=""> </a>
+                        <a href="https://lucasgweb.github.io/landpage-b7web-clone/"><img src="img/projeto3.png" alt="">
+                        </a>
                     </div>
+                </div>
+            </div>
+            <div class="skills">
+                <h1>Minhas skills</h1>
+                <p>Tecnologias com as quais tenho trabalhado recentemente</p>
+                <div class="stacks-items">
+                    <i class="devicon-html5-plain colored"></i>
+                    <i class="devicon-css3-plain colored"></i>
+                    <i class="devicon-bootstrap-plain colored"></i>
+                    <i class="devicon-javascript-plain colored"></i>
+                    <i class="devicon-jquery-plain colored"></i>
+                    <i class="devicon-php-plain colored"></i>
+                    <i class="devicon-laravel-plain colored"></i>
+                    <i class="devicon-nodejs-plain colored"></i>
+                    <i class="devicon-mysql-plain-wordmark colored"></i>
+                    <i class="devicon-git-plain colored"></i>
+                    <i class="devicon-vscode-plain colored"></i>
+                    <i class="devicon-phpstorm-plain-wordmark colored"></i>
                 </div>
             </div>
         </section>
@@ -72,7 +92,7 @@
     <footer class="footer">
         <p>© Lucas Henrique. 2022 All rigths reserved</p>
     </footer>
-
+    <script src="js/jquery.js"></script>
     <script>
         function typeWriter(elemento) {
             const textoArray = elemento.innerHTML.split('');
@@ -81,7 +101,7 @@
                 setTimeout(() => elemento.innerHTML += letra, 70 * i);
             });
         }
-    
+
         // Se estiver tendo problemas com performance, utilize o FOR loop como abaixo no local do forEach
         // function typeWriter(elemento) {
         //   const textoArray = elemento.innerHTML.split('');
@@ -90,9 +110,28 @@
         //     setTimeout(() => elemento.innerHTML += textoArray[i], 75 * i);
         //   }
         // }
-    
+
         const titulo = document.querySelector('#text-animated');
         typeWriter(titulo);
+
+        const skills = $(".skills");
+        const projetos = $(".projetos");
+
+        $("#skills").on('click',(event) => {
+            skills.show().addClass();
+            $("#skills").addClass("bg-1");
+            $("#projetos").removeClass("bg-1");
+            projetos.hide();
+
+        })
+
+        $("#projetos").on('click',(event) => {
+            skills.hide();
+            $("#skills").removeClass("bg-1");
+            $("#projetos").addClass("bg-1");
+            projetos.show();
+        })
+
     </script>
 </body>
 
