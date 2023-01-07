@@ -156,6 +156,7 @@ p {
 .btn {
     gap: 38px;
     display: flex;
+    user-select: none;
 }
 
 .btn a {
