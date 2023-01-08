@@ -96,7 +96,7 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
 }
 
 .perfil-descricao h1 {
@@ -112,6 +112,7 @@ p {
     text-align: center;
     line-height: 1;
 }
+
 #text-animated::after {
     content: '|';
     opacity: 1;
@@ -123,9 +124,12 @@ p {
 
 
 @keyframes blink {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 1;
     }
+
     50% {
         opacity: 0;
     }
@@ -134,8 +138,13 @@ p {
 .prefil-social {
     text-align: center;
     display: flex;
-    gap: 20px;
+    gap: 50px;
     justify-content: center;
+}
+
+.prefil-social i {
+    font-size: 1.8rem;
+    color: var(--font-color-2);
 }
 
 .sobre-mim {
@@ -189,47 +198,64 @@ p {
 
 .projetos {
     display: flex;
-    justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
 }
 
 .projetos-item img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
     transition: 0.4s;
 }
 
 .projetos-item {
     max-width: 362px;
     height: auto;
+    justify-content: space-between;
     flex-direction: column;
     display: flex;
-    justify-content: center;
     align-items: center;
     border-radius: 10px;
     transition: 0.4s;
+    background-color: var(--background-2);
+
+}
+
+.projetos-links {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #3D3D3D;
+    gap: 60px;
+    width: 75%;
+    padding: 15px;
+}
+
+.projetos-links a{
+    color: var(--font-color-1);
+    font-size: 0.8rem;
+}
+
+.projetos-links a i {
+    margin: 0 5px;
 }
 
 .projetos-item h2 {
     text-transform: uppercase;
-    font-size: 1.13rem;
+    font-size: 1rem;
+    text-align: center;
 }
 
-.projeto-foto img:hover {
-    opacity: 20%;
+.projetos-item small{
+    color: var(--font-color-2);
+    font-size: .7rem;
+    padding: 10px 0;
+    text-align: center;
+    max-width: 80%;
 }
 
-.projeto-foto:hover {
-    background-color: var(--background-3);
-    background-image: url('../img/link.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 10px;
-}
 
 .footer {
-    padding: 70px 0 10px 0;
+    padding: 100px 0 10px 0;
     text-align: center;
 }
 
@@ -248,7 +274,7 @@ p {
     font-size: 90px;
     margin-top: 150px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
     gap: 84px;
 }
@@ -259,13 +285,13 @@ p {
 
 .scroll-js {
     opacity: 0;
-    transform: translate3d(-90px, 40px , 0);
+    transform: translate3d(-90px, 40px, 0);
     transition: .7s;
 }
 
 .scroll-js.ativo {
     opacity: 1;
-    transform: translate3d(0, 0 , 0);
+    transform: translate3d(0, 0, 0);
 }
 
 
@@ -300,6 +326,7 @@ p {
 
     .perfil-descricao {
         align-items: center;
+        gap: 20px;
     }
 
     .portifolio-botao {
@@ -317,5 +344,9 @@ p {
         justify-content: center;
         flex-wrap: wrap;
         gap: 40px 30px;
+    }
+
+    .projetos {
+        justify-content: center;
     }
 }
