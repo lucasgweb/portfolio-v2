@@ -13,7 +13,8 @@ body {
     padding: 0;
     background-color: var(--background-1);
     background-image: url('../img/PolygonLuminary.svg');
-    opacity: 95%;
+    background-size: cover;
+    background-position: center;
 }
 
 a {
@@ -221,6 +222,10 @@ p {
 
 }
 
+.projetos-item:hover {
+    box-shadow: 0 0 1px 2px var(--font-color-3) ;
+}
+
 .projetos-links {
     display: flex;
     justify-content: center;
@@ -236,13 +241,17 @@ p {
 }
 
 .projetos-links a i {
-    margin: 0 5px;
+    margin: 0 7px;
 }
 
 .projetos-item h2 {
     text-transform: uppercase;
     font-size: 1rem;
     text-align: center;
+}
+
+.projetos-links a:hover, .projetos-links i:hover {
+    color: var(--background-3);
 }
 
 .projetos-item small{
@@ -305,8 +314,8 @@ p {
     }
 
     .btn a {
-        font-size: 0.7rem;
-        padding: 19px 27px;
+        font-size: 0.9rem;
+        padding: 16px 24px;
     }
 
     .btn a img {
