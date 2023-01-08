@@ -15,6 +15,7 @@ body {
     background-image: url('../img/PolygonLuminary.svg');
     background-size: cover;
     background-position: center;
+    user-select: none;
 }
 
 a {
